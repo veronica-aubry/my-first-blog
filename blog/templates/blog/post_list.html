@@ -1,16 +1,22 @@
+{% load staticfiles %}
+
 <html>
   <head>
-    <title>Veronica Aubry Alley</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <title>VERONICA AUBRY ALLEY</title>
   </head>
   <body>
 
-    <div>
-      <h1><a href="">Veronica Aubry Alley</a></h1>
+    <div class="header">
+      <h1><a href="">VERONICA AUBRY ALLEY</a></h1>
     </div>
 
   {% for post in posts %}
 
-    <div>
+    <div class="entry">
       <h3><a href="">{{ post.title }}</a></h3>
       <p>published:  {{ post.published_date }}</p>
       <p>{{ post.text|linebreaks }}</p>
